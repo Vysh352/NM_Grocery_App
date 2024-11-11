@@ -36,3 +36,8 @@
     font-family: "Bree Serif";
     font-size: 26px;
 } 
+
+.btn-primary{
+    background-color: #dc143c;
+    border-color: #dc143c;
+}

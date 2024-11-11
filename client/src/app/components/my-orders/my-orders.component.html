@@ -2,14 +2,14 @@
     <app-loader-spinner></app-loader-spinner>
 </div>
 <div class="p-4 myorder-container" *ngIf="!isLoading">
-    <h1 class="mb-2" style="color: rgb(62,62,62); font-size: 38px; font-weight: bold;">My Orders</h1>
+    <h1 class="mb-2" style="color: #000000; font-size: 38px; font-weight: bold;">My Orders</h1>
     
     <div class="container" *ngIf="myOrdersList.length === 0">
         <div class="row justify-content-center">
           <div class="col-12 text-center">
             <img src="https://img.freepik.com/free-vector/black-friday-concept-illustration_114360-3667.jpg?size=626&ext=jpg&ga=GA1.2.796843707.1683431325&semt=ais" alt="No Cart Items" class="img-fluid">
-            <h3 class="mt-3" style="color: rgb(98, 90, 252); font-weight: bold;">No Cart Items</h3>
-            <p style="color: #787878;">Your cart is empty. Start shopping now!</p>
+            <h3 class="mt-3" style="color: rgb(0, 0, 0); font-weight: bold;">No Cart Items</h3>
+            <p style="color: #000000;">Your cart is empty. Start shopping now!</p>
           </div>
         </div>
       </div> 
@@ -27,7 +27,7 @@
                     <p class="card-text"><strong>Status:</strong> {{ item.status }}</p>
                     <button class="btn btn-danger" *ngIf="item.status === 'Canceled'" [disabled]="true"
                         (click)="onCancelOrder(item._id)">Order Canceled</button>
-                    <button class="btn btn-outline-danger" *ngIf="item.status !== 'Canceled'"
+                    <button class="btn btn-primary" *ngIf="item.status !== 'Canceled'"
                         (click)="onCancelOrder(item._id)">Cancel Order</button>
                 </div>
             </div>

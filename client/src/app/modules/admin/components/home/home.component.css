@@ -67,3 +67,39 @@
     }
 }
 
+/* Card Styles */
+.product-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: #dc143c;
+}
+
+/* Update and Delete Button Styles */
+.update-btn {
+    background-color: #5ec401;
+    border-color: #5ec401;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc143c;
+    border-color: #dc143c;
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #5ec401;
+    border-color: #5ec401;
+    transform: scale(1.05);
+}
+
+.delete-btn:hover {
+    background-color: #dc143c;
+    border-color: #dc143c;
+    transform: scale(1.05);
+}

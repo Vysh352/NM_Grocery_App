@@ -1,38 +1,71 @@
-.feedback-container{
+/* Feedback Container */
+.feedback-container {
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: auto;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
 }
-@media screen and (max-width:768px) {
-    .registration-container{
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .registration-container {
         align-items: flex-start;
     }
 }
 
-
-.card{
+/* Card Styling */
+.card {
     padding: 40px;
     width: 50%;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-@media screen and (max-width:768px) {
-    .card{
-        border: 0;
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Card Width */
+@media screen and (max-width: 768px) {
+    .card {
+        border: none;
         width: 100%;
+        box-shadow: none;
     }
 }
 
-.heading{
+/* Heading and Image Adjustments */
+.heading {
     font-family: "Bree Serif";
     font-size: 26px;
+    color: #333333;
 }
 
-.image{
+.image {
     height: 80vh;
+    object-fit: cover;
 }
-@media screen and (max-width:768px) {
-    .image{
+
+@media screen and (max-width: 768px) {
+    .image {
         display: none;
     }
+}
+
+.btn-primary{
+    background: #dc134d;
+    border-color: #dc134d;
+}
+
+.btn-primary:hover {
+    background-color: #b30f32;
+    border-color: #b30f32;
 }

@@ -13,8 +13,9 @@
                 <p>{{ product?.description }}</p>
                 <h2>Price: {{ product?.price }}/-</h2>
             </div>
-            <div class="buttons-container"><button class="btn btn-warning w-50" routerLink="/place-order/{{product?._id}}">Buy Now</button>
-                <button (click)="onAddToCart(product?._id)" class="btn btn-primary w-50">Add To Cart</button>
+            <div class="buttons-container">
+                <button class="btn btn-buy-now w-50" routerLink="/place-order/{{product?._id}}">Buy Now</button>
+                <button (click)="onAddToCart(product?._id)" class="btn btn-add-to-cart w-50">Add To Cart</button>
             </div>
         </div>
     </div>

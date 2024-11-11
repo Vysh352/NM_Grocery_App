@@ -24,3 +24,27 @@
     align-items: center;
     justify-content: center;
 }
+
+/* Go Back Button */
+.btn-dark {
+  background-color: #343a40 !important;
+  border-color: #343a40 !important;
+}
+
+/* Buy Now and Add to Cart Buttons */
+.btn-buy-now {
+  background-color: #dc143c !important;
+  border-color: #dc143c !important;
+  color: #ffffff;
+}
+
+.btn-add-to-cart {
+  background-color: #5ec401 !important;
+  border-color: #5ec401 !important;
+  color: #ffffff;
+}
+
+.btn-buy-now:hover, .btn-add-to-cart:hover {
+  background-color: #b21334 !important; /* Slightly darker for hover */
+  border-color: #b21334 !important;
+}

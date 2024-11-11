@@ -49,3 +49,14 @@
   font-size: 36px;
   font-weight: bold;
 }
+
+.btn-primary{
+  background-color: #dc143d;
+  border-color: #dc143d;
+  justify-content:space-between; 
+}
+
+.btn-primary:hover{
+  background-color: #dc143d;
+  border-color: #dc143d;
+}

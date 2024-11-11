@@ -1,56 +1,116 @@
-.cartlist-container{
+/* Cart List Container */
+.cartlist-container {
     height: 90vh;
     overflow: auto;
+    background-color: #f7f7f7; /* Light background for contrast */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-.cart-list{
+
+/* Cart List */
+.cart-list {
     width: 100%;
     list-style-type: none;
     padding: 0 20px;
 }
 
-.cart-item{
+/* Cart Item */
+.cart-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     border: 1px solid #cecece;
-    padding: 10px;
+    padding: 15px;
     background-color: white;
     cursor: pointer;
-    margin: 0;
+    margin: 10px 0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 .cart-item:hover {
     box-shadow: 0 0 20px #e2e2e2;
-    border: none;
+    border-color: #dc143d;
     transform: scale(1.01);
-    transition: all 0.3s ease;
-  }
-.cart-details{
+}
+
+/* Cart Item Details */
+.cart-details {
     display: flex;
     align-items: center;
 }
-.image{
+
+/* Image */
+.image {
     width: 10%;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-@media screen and (max-width:768px) {
-    .image{
+@media screen and (max-width: 768px) {
+    .image {
         width: 100px;
     }
 }
 
-.loader-container{
+/* Loader Container */
+.loader-container {
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-.img-fluid{
+/* Product Image */
+.img-fluid {
     width: 30%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
-@media screen and (max-width:768px) {
-    .img-fluid{
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+@media screen and (max-width: 768px) {
+    .img-fluid {
         width: 100%;
+    }
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #dc143d;
+    border-color: #dc143d;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #b30f32;
+    border-color: #b30f32;
+}
+
+/* Enhanced Button Styles */
+.btn-secondary {
+    background-color: #333333;
+    border-color: #333333;
+    color: white;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+.btn-secondary:hover {
+    background-color: #4d4d4d;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cart-details {
+        width: 100%;
+        margin-top: 10px;
     }
 }

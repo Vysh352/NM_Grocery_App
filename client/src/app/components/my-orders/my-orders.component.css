@@ -1,13 +1,48 @@
-.myorder-container{
+/* My Order Container */
+.myorder-container {
     height: 90vh;
     width: 100%;
     overflow: auto;
     padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border-radius: 8px;
+    box-shadow: 0 0 15px #dc143d; /* Soft shadow for depth */
+    
 }
 
-.loader-container{
+/* Loader Container */
+.loader-container {
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Primary Button with Hover */
+.btn-primary {
+    background-color: #dc143d;
+    border-color: #dc143d;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+.btn-primary:hover {
+    background-color: #dc143d;
+    border-color: #dc143d;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+/* Additional Button Styling */
+.btn-secondary {
+    background-color: #333333;
+    border-color: #333333;
+    color: white;
+    padding: 8px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-secondary:hover {
+    background-color: #4d4d4d;
 }

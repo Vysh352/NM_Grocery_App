@@ -20,7 +20,7 @@
   .heading {
     font-size: 24px;
     font-weight: bold;
-    color: rgb(68, 68, 68);
+    color: rgb(0, 0, 0);
   }
   
   .nav {
@@ -45,7 +45,7 @@
   }
   
   .nav-link:hover {
-    background-color: #aaaaaa;
+    background-color: #dc143c;
   }
 
   .icon{
@@ -87,10 +87,19 @@
   }
   
   .nav-link.active {
-    background-color: rgb(68, 68, 68);
+    background-color: #dc143c;
     color: white;
   }
   
   .sidebar-icon {
     font-size: 24px; 
+  }
+  .ml-2{
+    background: #dc143c;
+    
+  }
+
+  .ml-2:hover{
+    background: #dc143c;
+    transform: scale(1.05);
   }

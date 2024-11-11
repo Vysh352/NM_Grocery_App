@@ -18,3 +18,16 @@
         width: 100%;
     }
 }
+.card-custom-border {
+    border: 2px solid #dc143c; /* Sets the border color and thickness */
+    border-radius: 8px; /* Optional: Adds a slight roundness to the corners */
+}
+.card-custom-border {
+    border: 2px solid transparent; /* Default border color */
+    border-radius: 8px; /* Optional: Adds slight roundness to the corners */
+    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card-custom-border:hover {
+    border-color: #dc143c; /* Changes border color on hover */
+}

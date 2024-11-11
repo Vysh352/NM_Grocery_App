@@ -33,7 +33,7 @@
 
   <div *ngIf="data.length !== 0">
     <div class="row" *ngIf="!isUpdate">
-      <div class="card mb-2" *ngFor="let item of data">
+      <div class="card mb-2 card-custom-border" *ngFor="let item of data">
         <div class="card-body">
           <h5 class="card-title"><strong>Order ID:</strong> {{ item._id }}</h5>
           <p class="card-text"><strong>Fullname:</strong> {{ item.firstname }} {{ item.lastname }}</p>
@@ -46,16 +46,17 @@
           <p class="card-text"><strong>Created At: </strong>{{ item.createdAt | date}}</p>
           <div class="d-flex align-items-center justify-content-between">
             <p class="card-text"><strong>Status:</strong> {{ item.status }}</p>
-            <button class="btn" (click)="onChangeStatus(item._id)"
-              style="background-color: rgb(98, 90, 252); color: #fff; width: 150px;"
+            <button class="btn btn-custom-hover" (click)="onChangeStatus(item._id)"
+              style="background-color: #dc143c; color: #fff; width: 150px;"
               *ngIf="item.status !== 'Canceled' && item.status !== 'Delivered'">Update status</button>
-            <button class="btn" (click)="onChangeStatus(item._id)" *ngIf="item.status === 'Canceled'" [disabled]="true"
-              class="btn btn-danger">Customer Canceled</button>
-            <button class="btn" (click)="onChangeStatus(item._id)" *ngIf="item.status === 'Delivered'" [disabled]="true"
-              class="btn btn-success">Delivered</button>
+            <button class="btn btn-custom-hover" (click)="onChangeStatus(item._id)" *ngIf="item.status === 'Canceled'"
+              [disabled]="true" class="btn btn-danger">Customer Canceled</button>
+            <button class="btn btn-custom-hover" (click)="onChangeStatus(item._id)" *ngIf="item.status === 'Delivered'"
+              [disabled]="true" class="btn btn-success">Delivered</button>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
 </div>

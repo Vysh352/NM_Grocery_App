@@ -4,9 +4,20 @@ const path = require("path");
 const app = express();
 const cors = require('cors')
 const jwt = require('jsonwebtoken');
-const port = process.env.PORT || 5100;
+// const port = process.env.PORT || 5100;
+const port =  5200; 
 const mongoose = require('mongoose');
-const { MONGO_URI } = require('./db/connect');
+// const { MONGO_URI } = require('./db/connect');
+// require("./db/connect")
+mongoose.connect("mongodb+srv://karthikrajgokul:mongodb123@cluster0.9do9o.mongodb.net/GroceryApp?retryWrites=true&w=majority&appName=Cluster0").then(()=>
+{
+    console.log("connected")
+})
+.catch((error)=>
+{
+    console.log(error)
+})
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -20,6 +31,7 @@ function adminAuthenticateToken(req, res, next) {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
     if (!token) return res.status(401).send('Unauthorized');
+    // jwt.verify(token, 'ADMIN_SECRET_TOKEN', (err, user) => {
     jwt.verify(token, 'ADMIN_SECRET_TOKEN', (err, user) => {
         if (err) return res.status(403).send('Forbidden');
         req.user = user;
@@ -346,9 +358,9 @@ app.post('/login', async (req, res) => {
     const { email, password } = req.body;
     const user = await models.Users.findOne({ email });
     if (!user) {
-        return res.status(401).json({ message: 'Invalid email or password' });
+        return res.status(401).json({ message: 'Invalid  email or password' });
     }
-    const isAdmin = email == 'virat@gmail.com' && password == 'virat@1234';
+    const isAdmin = email == 'karthik@gmail.com' && password == '12345';    
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
         return res.status(401).json({ message: 'Invalid email or password' });
@@ -356,10 +368,12 @@ app.post('/login', async (req, res) => {
 
     // Generate a JWT token
     if (!isAdmin) {
+        // const token = jwt.sign({ userId: user._id }, 'mysecretkey');
         const token = jwt.sign({ userId: user._id }, 'mysecretkey');
         res.json({ user, token });
     } else {
         const jwtToken = jwt.sign({ userId: user._id }, 'mysecretkey');
+     
         res.json({ user, jwtToken });
     }
 });

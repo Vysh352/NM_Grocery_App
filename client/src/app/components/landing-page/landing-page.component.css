@@ -1,41 +1,34 @@
+/* Main Containers */
 .main-container {
     height: 90vh;
     overflow: auto;
-}
-
-.products-container {
-    width: 100%;
-    /* display: flex; */
 }
 
 .body-container {
     height: 90vh;
     overflow: auto;
     width: 100%;
-    padding: 40px 20px;
+    padding: 10px 10px;
 }
 
 @media screen and (max-width:768px) {
     .body-container {
-        width: 100%;
         padding: 15px;
     }
 }
 
+/* Sidebar & Filters */
 .sidebar-container {
     width: 100%;
-    gap: 20px;
     display: flex;
-    color: #333333;
+    gap: 10px;
+    color: #000000;
     border-right: 1px solid #dfdfdf;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    padding: 15px;
 }
 
-.searchbar-container{
-    width: 50%;
-}
-
-.category-filter-container{
+.searchbar-container, .category-filter-container {
     width: 50%;
 }
 
@@ -43,33 +36,45 @@
     .sidebar-container {
         flex-direction: column;
     }
-    .searchbar-container{
+    .searchbar-container, .category-filter-container {
         width: 100%;
     }
-    .category-filter-container{
-        width: 100%;
-    }
-    .description{
+    .description {
         display: none;
     }
 }
 
-
+/* Products List & Cards */
+.products-container {
+    width: 100%;
+}
 
 .products-list-container {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
-
-
 .card {
     width: 20rem;
-    border-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px rgba(0, 128, 0, 0.2);
+    transform: scale(1.03);
+    border-color: #dc143c;
+}
+
+.card-img-top {
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
 }
 
 @media screen and (max-width:768px) {
@@ -78,19 +83,23 @@
     }
 }
 
-.update-card {
-    border: 1px solid grey;
+/* Button Container */
+.buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.card:hover {
-    box-shadow: 0 0 20px #e2e2e2;
-    border: none;
-    transform: scale(1.02);
-    transition: all 0.3s ease;
-    border-radius: 0;
+@media screen and (max-width:768px) {
+    .buttons-container {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+    }
 }
 
-
+/* Loader */
 .loader-container {
     height: 90vh;
     display: flex;
@@ -98,23 +107,61 @@
     justify-content: center;
 }
 
-.card-img-top{
-    height: 240px;
-
+/* Update Card Style */
+.update-card {
+    border: 1px solid #38a169;
 }
+.carousel-inner img {
+    max-width: 50%; /* Adjust as needed */
+    max-height: 400px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image scales properly without distortion */
+    margin: 0 auto; /* Centers the image */
+}
+/* Button Customizations */
 
-.buttons-container{
+/* Rating Background */
+.rating-background {
+    background-color: #5ec401 !important;
+    color: #ffffff;
+    width: 60px;
+    height: 30px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 4px;
+    padding-top: 16px;
 }
 
-@media screen and (max-width:768px) {
-    .buttons-container{
-        flex-direction: column;
-    }
-    .btn{
-        width: 100%;
-    }
+/* Add and Buy Buttons */
+ .btn-buy-now {
+    background-color: #dc143c !important;
+    border-color: #dc143c !important;
+    color: #ffffff;
+    width: 100%;
+}
+.btn-add-to-cart{
+    background-color: #5ec401 !important;
+    border-color: #5ec401 !important;
+    color: #ffffff;
+    width: 100%;
 }
 
+ .btn-buy-now:hover {
+    background-color: #b21334 !important;
+    border-color: #b21334 !important;
+}
+.btn-add-to-cart:hover{
+    background-color: #5ec401 !important;
+    border-color: #5ec401 !important;
+}
+.btn-search{
+    background-color: #dc143c !important;
+    border-color: #dc143c !important;
+    color: #ffffff;
+    width: 100%;
+}
+.btn-search:hover{
+    background-color: #b21334 !important;
+    border-color: #b21334 !important;
+}

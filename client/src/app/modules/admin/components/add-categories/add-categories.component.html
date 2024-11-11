@@ -2,7 +2,7 @@
     <app-loader-spinner></app-loader-spinner>
 </div>
 <div class="cotegory-container" *ngIf="!isLoading">
-    <h1 style="color: rgb(62,62,62); font-size: 38px; font-weight: bold;" class="mb-4">Add Categories</h1>
+    <h1 style="color: rgb(0, 0, 0); font-size: 38px; font-weight: bold;" class="mb-4">Add Categories</h1>
     <div class="card  mt-3" style="border: 0;">
         <form [formGroup]="regForm" #r="ngForm" (ngSubmit)="onSubmit(r.value)"class="form">
             <div class="form-group mb-2">
@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn mt-4 w-100" style="background-color: rgb(68, 68, 68); color: white;" [disabled]="regForm.invalid" >Add Category</button>
+            <button type="submit" class="btn mt-4 w-100" style="background-color: #dc143c; color: white;" [disabled]="regForm.invalid" >Add Category</button>
         </form>
     </div>
 </div>
